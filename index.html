@@ -2,17 +2,74 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Traction Craft Minecraft Server</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Link Google Font -->
-  <link rel="stylesheet" href="style.css"> <!-- Link ke file CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: url('https://raw.githubusercontent.com/arzaqie/Traction-Website/main/kjvnh6ho0h731.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      font-family: 'sans-serif';
+      padding: 20px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    .btn {
+      background: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 10px;
+      display: inline-block;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
   <h1>Traction Craft Minecraft Server</h1>
-  <p>IP: <strong>play.tractioncraft.xyz</strong></p>
+
+  <p>IP: <strong id="server-ip">play.tractioncraft.xyz</strong></p>
   <p>Versi: 1.20.4</p>
-  
-  <a class="btn" href="https://discord.gg/Bkj9e8Bp">Join Discord</a>
-  <a class="btn" href="https://whatsapp.com/channel/0029VayF7pBKmCPPDb5u3K2b">Join WhatsApp</a>
+
+  <button class="btn" onclick="copyIP()">Salin IP & Buka Minecraft</button>
+  <br>
+  <a class="btn" href="https://discord.gg/Bkj9e8Bp" target="_blank">Join Discord</a>
+  <a class="btn" href="https://wa.me/6283155619021" target="_blank">Join WhatsApp</a>
+
+  <script>
+    function copyIP() {
+      const ip = document.getElementById("server-ip").innerText;
+      navigator.clipboard.writeText(ip).then(() => {
+        alert("IP berhasil disalin! Buka Minecraft dan klik Multiplayer.");
+      });
+    }
+  </script>
 </body>
 </html>
