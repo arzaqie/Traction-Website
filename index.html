@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Traction Craft Minecraft Server</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,14 +12,14 @@
   <p>IP: <strong id="server-ip">play.tractioncraft.xyz</strong></p>
   <p>Versi: 1.20.4</p>
 
-  <!-- Tombol Salin IP (Tanpa JavaScript) -->
-  <button class="btn" onclick="window.location.href='minecraft://play/tractioncraft.xyz';">Buka Minecraft</button>
+  <!-- Tombol Salin IP -->
+  <button class="btn" onclick="copyIP()">Salin IP & Buka Minecraft</button>
   <br>
   <a class="btn" href="https://discord.gg/Bkj9e8Bp" target="_blank">Join Discord</a>
   <a class="btn" href="https://wa.me/6283155619021" target="_blank">Join WhatsApp</a>
 
-  <!-- Rank Container -->
-  <div class="rank-container">
+  <!-- Rank Container untuk geser -->
+  <div class="rank-container" id="rankContainer">
     <div class="rank-card">
       <h3>Rank 1</h3>
       <p>Fitur: Akses ke server, starter kit, dan 10x lebih banyak item!</p>
@@ -40,5 +41,11 @@
       <p>Fitur: Semua fitur Rank 4, support langsung, dan status VIP permanen.</p>
     </div>
   </div>
+
+  <!-- Tombol Geser -->
+  <button class="left-arrow">←</button>
+  <button class="right-arrow">→</button>
+
+  <script src="js/script.js"></script> <!-- Menambahkan file JS -->
 </body>
 </html>
