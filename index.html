@@ -1,39 +1,53 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arzaqie - Link Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trac Botzz Links</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <img src="profile.png" alt="Avatar" class="profile-img" />
-  <h2>Arzaqie</h2>
-  <p>Klik tombol di bawah untuk request, support, atau join komunitas!</p>
-
-  <div class="links">
-    <a class="link-btn" href="https://youtube.com/@Arzaqie" target="_blank">YouTube</a>
-    <a class="link-btn" href="https://www.tiktok.com/@arzaqie_" target="_blank">TikTok</a>
-    <a class="link-btn" href="https://sociabuzz.com/kingfadmc" target="_blank">Sociabuzz</a>
-    <a class="link-btn" href="https://discord.gg/community" target="_blank">Community Discord</a>
-    <a class="link-btn" href="https://discord.gg/tractionsmp" target="_blank">Traction SMP Discord</a>
-    <a class="link-btn" href="https://instagram.com/" target="_blank">Instagram</a>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader"></div>
   </div>
 
-  <button id="toggle-music" title="Toggle Music">🔊</button>
+  <button id="toggle-music" title="Toggle Music">
+    <i class="fas fa-volume-up"></i>
+  </button>
 
-  <footer>
-    Created by arzaqie - 2025
-  </footer>
+  <div class="profile-container">
+    <canvas id="particle-canvas"></canvas>
+    <img src="profile.png" alt="Profile" class="profile-img" id="profile" />
+  </div>
 
-  <audio id="bgm" loop>
-    <source src="musik.mp3" type="audio/mpeg" />
-  </audio>
+  <h2 id="title">Trac Botzz</h2>
+  <p id="subtitle">Created by Arzaqie</p>
 
-  <audio id="click-sfx">
-    <source src="click.mp3" type="audio/mpeg" />
-  </audio>
+  <div id="ticker-container">
+    <marquee id="date-time-ticker" behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();"></marquee>
+  </div>
+
+  <div class="links" id="links">
+    <a class="link-btn" href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+    <a class="link-btn" href="https://tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a class="link-btn" href="https://sociabuzz.com/" target="_blank"><i class="fas fa-star"></i> Sociabuzz</a>
+    <a class="link-btn" href="#" target="_blank"><i class="fas fa-film"></i> Sinetron</a>
+    <a class="link-btn" href="#" target="_blank"><i class="fas fa-user"></i> Arzaqie</a>
+    <a class="link-btn" href="https://discord.gg/your-link" target="_blank"><i class="fab fa-discord"></i> Community</a>
+    <a class="link-btn" href="https://discord.gg/your-link" target="_blank"><i class="fab fa-discord"></i> Traction SMP</a>
+    <a class="link-btn" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+
+  <!-- Audio Visualizer Canvas -->
+  <canvas id="visualizer"></canvas>
+
+  <footer>© 2025 Trac Botzz by Arzaqie</footer>
+
+  <audio id="bg-music" src="musik.mp3" autoplay loop crossorigin="anonymous"></audio>
+  <audio id="click-sound" src="click.mp3"></audio>
 
   <script src="script.js"></script>
 </body>
