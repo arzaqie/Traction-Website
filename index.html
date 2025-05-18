@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arzaqiee - Link Page</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Arzaqie - Link Page</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <img src="profile.png" alt="Avatar" class="profile-img" />
-  <h2>Arzaqiee</h2>
+  <h2>Arzaqie</h2>
   <p>Klik tombol di bawah untuk request, support, atau join komunitas!</p>
 
   <div class="links">
     <a class="link-btn" href="https://youtube.com/" target="_blank">YouTube</a>
     <a class="link-btn" href="https://tiktok.com/" target="_blank">TikTok</a>
     <a class="link-btn" href="https://sociabuzz.com/kingfadmc" target="_blank">Sociabuzz</a>
-    <a class="link-btn" href="https://sinetron-arzaqie.com" target="_blank">Sinetron Arzaqie</a>
     <a class="link-btn" href="https://discord.gg/community" target="_blank">Community Discord</a>
     <a class="link-btn" href="https://discord.gg/tractionsmp" target="_blank">Traction SMP Discord</a>
     <a class="link-btn" href="https://instagram.com/" target="_blank">Instagram</a>
@@ -25,6 +24,20 @@
   <footer>
     Dibuat oleh Arzaqie - 2025
   </footer>
+
+  <!-- Audio dan tombol musik -->
+  <audio id="bgm" loop>
+    <source src="musik.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button id="music-toggle" aria-label="Toggle Music">
+    <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+      <path d="M3 22v-20l18 10-18 10z"/>
+    </svg>
+    <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24" style="display:none;">
+      <path d="M6 4h4v16h-4zm8 0h4v16h-4z"/>
+    </svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
