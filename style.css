@@ -49,20 +49,39 @@ h2, p, .link-btn {
 }
 
 .link-btn {
-  background: #111;
-  padding: 1em 2em;
-  border-radius: 12px;
-  text-decoration: none;
+  background: linear-gradient(135deg, #00ffc8, #0066ff);
   color: white;
-  font-weight: bold;
-  box-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
-  border: 2px solid #00ffe1;
-  transition: transform 0.2s, box-shadow 0.3s;
+  padding: 1em 2.2em;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1em;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(0,255,255,0.6);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+}
+
+.link-btn:hover::before {
+  transform: scale(1);
 }
 
 .link-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px #00ffe1, 0 0 30px #00ffe1;
+  box-shadow: 0 0 20px #00ffe1, 0 0 30px #00ffe1;
 }
 
 footer {
