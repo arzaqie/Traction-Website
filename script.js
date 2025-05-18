@@ -29,3 +29,15 @@ toggleBtn.addEventListener('click', () => {
     iconPause.style.display = 'none';
   }
 });
+
+// … kode animasi muncul …
+
+// Inisialisasi efek klik
+const clickSfx = document.getElementById('click-sfx');
+document.querySelectorAll('.link-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Reset posisi audio, lalu play
+    clickSfx.currentTime = 0;
+    clickSfx.play();
+  });
+});
