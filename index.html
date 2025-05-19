@@ -54,22 +54,49 @@
 
   <script src="script.js"></script>
 
-  <!-- Script tsParticles -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-  <script>
-    tsParticles.load("tsparticles", {
-      background: {
-        color: "#00000000"
-      },
-      particles: {
-        number: { value: 60 },
-        color: { value: "#ffffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.4 },
-        size: { value: 2 },
-        move: { enable: true, speed: 1 }
+  <!-- tsParticles Library -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<!-- Inisialisasi Partikel -->
+<script>
+  tsParticles.load("tsparticles", {
+    background: {
+      color: {
+        value: "#00000000" // transparan
       }
-    });
-  </script>
+    },
+    fpsLimit: 60,
+    particles: {
+      number: {
+        value: 60,
+        density: {
+          enable: true,
+          area: 800
+        }
+      },
+      color: {
+        value: "#ffffff"
+      },
+      shape: {
+        type: "circle"
+      },
+      opacity: {
+        value: 0.4
+      },
+      size: {
+        value: 2
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: "none",
+        outModes: {
+          default: "bounce"
+        }
+      }
+    },
+    detectRetina: true
+  });
+</script>
 </body>
 </html>
