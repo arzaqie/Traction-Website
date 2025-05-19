@@ -214,4 +214,15 @@ footer {
   #visualizer {
     max-width: 90vw;
   }
+
+  /* === Partikel Background (tsParticles) === */
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Supaya ada di belakang semua elemen lain */
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Supaya tidak menghalangi klik elemen lain */
+}
 }
