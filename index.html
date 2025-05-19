@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <div id="tsparticles"></div>
 
   <!-- Loading Screen -->
   <div id="loading-screen">
@@ -51,5 +50,23 @@
   <audio id="click-sound" src="click.mp3"></audio>
 
   <script src="script.js"></script>
+
+  <!-- Script tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("tsparticles", {
+      background: {
+        color: "#00000000"
+      },
+      particles: {
+        number: { value: 60 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.4 },
+        size: { value: 2 },
+        move: { enable: true, speed: 1 }
+      }
+    });
+  </script>
 </body>
 </html>
