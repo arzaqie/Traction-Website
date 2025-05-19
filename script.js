@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
     });
     const timeStr = now.toLocaleTimeString(undefined, { hour12: false });
-    ticker.textContent = `🕒 ${timeStr} — 📅 ${dateStr} — Welcome to Trac Botzz!`;
+    ticker.textContent = `🕒 ${timeStr} — 📅 ${dateStr} — Welcome to Arzaqie Link!`;
   }
   updateDateTime();
   setInterval(updateDateTime, 1000);
